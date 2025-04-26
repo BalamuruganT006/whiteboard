@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1a1a1a">
   <title>Real-time Collaborative Whiteboard</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,11 +13,30 @@
   <div class="container">
     <h1>Real-time Collaborative Whiteboard</h1>
     <div class="toolbar">
-      <button id="pencil" data-tooltip="Draw">Pencil</button>
-      <button id="eraser" data-tooltip="Erase">Eraser</button>
-      <button id="undo" data-tooltip="Undo">Undo</button>
-      <button id="redo" data-tooltip="Redo">Redo</button>
-      <input type="color" id="colorPicker" value="#000000" data-tooltip="Pick Color">
+      <div class="tool-group">
+        <button id="pencil" data-tooltip="Draw">Pencil</button>
+        <button id="eraser" data-tooltip="Erase">Eraser</button>
+        <button id="clear" data-tooltip="Clear Canvas">Clear</button>
+        <button id="save" data-tooltip="Save Drawing">Save</button>
+      </div>
+      <div class="tool-group">
+        <button id="undo" data-tooltip="Undo">Undo</button>
+        <button id="redo" data-tooltip="Redo">Redo</button>
+      </div>
+      <div class="tool-group">
+        <input type="color" id="colorPicker" value="#000000" data-tooltip="Pick Color">
+        <select id="brushSize" data-tooltip="Brush Size">
+          <option value="2">Thin</option>
+          <option value="5">Medium</option>
+          <option value="10">Thick</option>
+          <option value="20">Extra Thick</option>
+        </select>
+        <select id="brushStyle" data-tooltip="Brush Style">
+          <option value="solid">Solid</option>
+          <option value="dashed">Dashed</option>
+          <option value="dotted">Dotted</option>
+        </select>
+      </div>
     </div>
     <canvas id="whiteboard" width="800" height="600"></canvas>
   </div>
