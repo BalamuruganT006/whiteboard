@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Collaborative Whiteboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Real-time Collaborative Whiteboard</h1>
+    <div class="toolbar">
+      <button id="pencil" data-tooltip="Draw">Pencil</button>
+      <button id="eraser" data-tooltip="Erase">Eraser</button>
+      <button id="undo" data-tooltip="Undo">Undo</button>
+      <button id="redo" data-tooltip="Redo">Redo</button>
+      <input type="color" id="colorPicker" value="#000000" data-tooltip="Pick Color">
+    </div>
+    <canvas id="whiteboard" width="800" height="600"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
